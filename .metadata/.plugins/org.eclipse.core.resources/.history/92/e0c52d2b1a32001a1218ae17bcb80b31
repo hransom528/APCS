@@ -1,0 +1,13 @@
+public class Course{
+   // TODO: Declare private fields - courseNumber, courseTitle
+
+   // TODO: Define mutator methods - 
+   //       setCourseNumber(), setCourseTitle()
+
+
+   // TODO: Define accessor methods - 
+   //       getCourseNumber(), getCourseTitle()
+
+   // TODO: Define printInfo()
+ 
+}

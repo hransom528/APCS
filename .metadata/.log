@@ -1,0 +1,645 @@
+!SESSION 2020-01-07 08:36:43.705 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=12.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+This is a continuation of log file H:\APCS\.metadata\.bak_0.log
+Created Time: 2020-01-07 09:26:24.031
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2020-01-07 09:26:24.034
+!MESSAGE Unable to read repository at http://download.eclipse.org/eclipse/updates/4.12.
+!STACK 0
+java.io.IOException: http://download.eclipse.org/eclipse/updates/4.12 is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:114)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:759)
+	at jdk.internal.reflect.GeneratedMethodAccessor60.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+!SESSION 2020-01-08 07:25:51.315 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=12.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2020-01-08 07:26:11.645
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [272]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [59]
+         Unresolved requirement: Import-Package: javax.xml.bind
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.2.v20180904-2231"; singleton:="true"
+       org.eclipse.mylyn.commons.xmlrpc [289]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:457)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1769)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2020-01-08 07:26:11.661
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [274]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.bugzilla.core; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.bugzilla.core; bundle-version="3.24.2.v20180905-0003"; singleton:="true"
+       org.eclipse.mylyn.bugzilla.core [272]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+              org.apache.xmlrpc [59]
+                Unresolved requirement: Import-Package: javax.xml.bind
+         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.2.v20180904-2231"; singleton:="true"
+              org.eclipse.mylyn.commons.xmlrpc [289]
+                Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:457)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1769)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2020-01-08 07:26:11.663
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [289]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [59]
+         Unresolved requirement: Import-Package: javax.xml.bind
+
+	at org.eclipse.osgi.container.Module.start(Module.java:457)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1769)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.egit.core 1 0 2020-01-08 07:26:48.649
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.mylyn.tasks.core 4 0 2020-01-08 07:27:12.568
+!MESSAGE Unexpected error while loading repository template extensions
+!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2020-01-08 07:27:12.568
+!MESSAGE Could not load repository template extension contributed by 'org.eclipse.mylyn.bugzilla.ide' with connectorKind 'bugzilla'
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-01-08 07:27:23.999
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'H:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2020-01-08 08:04:15.291
+!MESSAGE Unable to read repository at http://download.eclipse.org/releases/2019-06.
+!STACK 0
+java.io.IOException: http://download.eclipse.org/releases/2019-06 is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:114)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:759)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2020-01-08 08:04:20.428
+!MESSAGE Unable to read repository at http://download.eclipse.org/eclipse/updates/4.12.
+!STACK 0
+java.io.IOException: http://download.eclipse.org/eclipse/updates/4.12 is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:114)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:759)
+	at jdk.internal.reflect.GeneratedMethodAccessor60.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+!SESSION 2020-01-08 10:44:58.104 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=12.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.core 1 0 2020-01-08 10:46:26.224
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-01-08 10:47:26.619
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'H:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2020-01-08 11:00:31.482
+!MESSAGE Unable to read repository at http://download.eclipse.org/releases/2019-06.
+!STACK 0
+java.io.IOException: http://download.eclipse.org/releases/2019-06 is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:114)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:759)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2020-01-08 11:00:35.013
+!MESSAGE Unable to read repository at http://download.eclipse.org/eclipse/updates/4.12.
+!STACK 0
+java.io.IOException: http://download.eclipse.org/eclipse/updates/4.12 is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:114)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:759)
+	at jdk.internal.reflect.GeneratedMethodAccessor63.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+!SESSION 2020-01-10 09:39:20.708 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=12.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2020-01-10 09:39:29.146
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [272]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.2.v20180904-2231"; singleton:="true"
+       org.eclipse.mylyn.commons.xmlrpc [289]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+              org.apache.xmlrpc [59]
+                Unresolved requirement: Import-Package: javax.xml.bind
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:457)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1769)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2020-01-10 09:39:29.198
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [274]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.bugzilla.core; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.bugzilla.core; bundle-version="3.24.2.v20180905-0003"; singleton:="true"
+       org.eclipse.mylyn.bugzilla.core [272]
+         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.2.v20180904-2231"; singleton:="true"
+              org.eclipse.mylyn.commons.xmlrpc [289]
+                Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+                     org.apache.xmlrpc [59]
+                       Unresolved requirement: Import-Package: javax.xml.bind
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:457)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1769)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2020-01-10 09:39:29.389
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [289]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [59]
+         Unresolved requirement: Import-Package: javax.xml.bind
+
+	at org.eclipse.osgi.container.Module.start(Module.java:457)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1769)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.egit.core 1 0 2020-01-10 09:40:06.733
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.mylyn.tasks.core 4 0 2020-01-10 09:40:22.250
+!MESSAGE Unexpected error while loading repository template extensions
+!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2020-01-10 09:40:22.250
+!MESSAGE Could not load repository template extension contributed by 'org.eclipse.mylyn.bugzilla.ide' with connectorKind 'bugzilla'
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-01-10 09:40:41.731
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'H:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2020-01-10 10:21:01.202 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=12.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2020-01-10 10:21:02.683
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [272]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.2.v20180904-2231"; singleton:="true"
+       org.eclipse.mylyn.commons.xmlrpc [289]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+              org.apache.xmlrpc [59]
+                Unresolved requirement: Import-Package: javax.xml.bind
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:457)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1769)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2020-01-10 10:21:02.703
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [274]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.bugzilla.core; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.bugzilla.core; bundle-version="3.24.2.v20180905-0003"; singleton:="true"
+       org.eclipse.mylyn.bugzilla.core [272]
+         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.2.v20180904-2231"; singleton:="true"
+              org.eclipse.mylyn.commons.xmlrpc [289]
+                Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+                     org.apache.xmlrpc [59]
+                       Unresolved requirement: Import-Package: javax.xml.bind
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:457)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1769)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2020-01-10 10:21:02.715
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [289]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [59]
+         Unresolved requirement: Import-Package: javax.xml.bind
+
+	at org.eclipse.osgi.container.Module.start(Module.java:457)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1769)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.egit.core 1 0 2020-01-10 10:21:05.778
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.mylyn.tasks.core 4 0 2020-01-10 10:21:09.311
+!MESSAGE Unexpected error while loading repository template extensions
+!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2020-01-10 10:21:09.312
+!MESSAGE Could not load repository template extension contributed by 'org.eclipse.mylyn.bugzilla.ide' with connectorKind 'bugzilla'
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-01-10 10:21:17.855
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'H:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2020-01-10 10:28:28.135
+!MESSAGE Unable to read repository at http://download.eclipse.org/releases/2019-06.
+!STACK 0
+java.io.IOException: http://download.eclipse.org/releases/2019-06 is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:114)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:759)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2020-01-10 10:28:31.061
+!MESSAGE Unable to read repository at http://download.eclipse.org/eclipse/updates/4.12.
+!STACK 0
+java.io.IOException: http://download.eclipse.org/eclipse/updates/4.12 is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:114)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:759)
+	at jdk.internal.reflect.GeneratedMethodAccessor55.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:409)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:201)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:476)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+!SESSION 2020-01-13 09:09:47.008 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=12.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2020-01-13 09:09:48.114
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [272]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.2.v20180904-2231"; singleton:="true"
+       org.eclipse.mylyn.commons.xmlrpc [289]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+              org.apache.xmlrpc [59]
+                Unresolved requirement: Import-Package: javax.xml.bind
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:457)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1769)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2020-01-13 09:09:48.127
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [274]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.bugzilla.core; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.bugzilla.core; bundle-version="3.24.2.v20180905-0003"; singleton:="true"
+       org.eclipse.mylyn.bugzilla.core [272]
+         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.2.v20180904-2231"; singleton:="true"
+              org.eclipse.mylyn.commons.xmlrpc [289]
+                Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+                     org.apache.xmlrpc [59]
+                       Unresolved requirement: Import-Package: javax.xml.bind
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:457)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1769)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2020-01-13 09:09:48.138
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [289]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [59]
+         Unresolved requirement: Import-Package: javax.xml.bind
+
+	at org.eclipse.osgi.container.Module.start(Module.java:457)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1769)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.egit.core 1 0 2020-01-13 09:09:53.455
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.mylyn.tasks.core 4 0 2020-01-13 09:09:59.875
+!MESSAGE Unexpected error while loading repository template extensions
+!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2020-01-13 09:09:59.875
+!MESSAGE Could not load repository template extension contributed by 'org.eclipse.mylyn.bugzilla.ide' with connectorKind 'bugzilla'
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-01-13 09:10:11.877
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'H:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2020-01-14 07:29:29.208 -----------------------------------------------
+eclipse.buildId=4.12.0.I20190605-1800
+java.version=12.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2020-01-14 07:29:34.152
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [272]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [59]
+         Unresolved requirement: Import-Package: javax.xml.bind
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.2.v20180904-2231"; singleton:="true"
+       org.eclipse.mylyn.commons.xmlrpc [289]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:457)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1769)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2020-01-14 07:29:34.174
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [274]
+  Unresolved requirement: Require-Bundle: org.eclipse.mylyn.bugzilla.core; bundle-version="[3.8.0,4.0.0)"
+    -> Bundle-SymbolicName: org.eclipse.mylyn.bugzilla.core; bundle-version="3.24.2.v20180905-0003"; singleton:="true"
+       org.eclipse.mylyn.bugzilla.core [272]
+         Unresolved requirement: Require-Bundle: org.apache.xmlrpc
+           -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+              org.apache.xmlrpc [59]
+                Unresolved requirement: Import-Package: javax.xml.bind
+         Unresolved requirement: Require-Bundle: org.eclipse.mylyn.commons.xmlrpc; bundle-version="[3.8.0,4.0.0)"
+           -> Bundle-SymbolicName: org.eclipse.mylyn.commons.xmlrpc; bundle-version="3.24.2.v20180904-2231"; singleton:="true"
+              org.eclipse.mylyn.commons.xmlrpc [289]
+                Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+                  -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:457)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1769)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2020-01-14 07:29:34.180
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [289]
+  Unresolved requirement: Require-Bundle: org.apache.xmlrpc; bundle-version="[3.0.0,4.0.0)"
+    -> Bundle-SymbolicName: org.apache.xmlrpc; bundle-version="3.0.0.v20100427-1100"
+       org.apache.xmlrpc [59]
+         Unresolved requirement: Import-Package: javax.xml.bind
+
+	at org.eclipse.osgi.container.Module.start(Module.java:457)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$1.run(ModuleContainer.java:1820)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$2$1.execute(EquinoxContainerAdaptor.java:150)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1813)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1769)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1735)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1661)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.egit.core 1 0 2020-01-14 07:29:46.075
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.mylyn.tasks.core 4 0 2020-01-14 07:29:55.974
+!MESSAGE Unexpected error while loading repository template extensions
+!SUBENTRY 1 org.eclipse.mylyn.tasks.core 4 0 2020-01-14 07:29:55.974
+!MESSAGE Could not load repository template extension contributed by 'org.eclipse.mylyn.bugzilla.ide' with connectorKind 'bugzilla'
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-01-14 07:30:32.515
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'H:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.

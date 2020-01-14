@@ -1,0 +1,30 @@
+public class OfferedCourse extends Course {
+   // TODO: Declare private fields - instructorName, term, classTime
+	private String instructorName;
+	private int term;
+	private int classTime;
+	
+	public String getInstructorName() {
+		return instructorName;
+	}
+	
+	public void setInstructorName(String instructorName) {
+		this.instructorName = instructorName;
+	}
+	
+	public int getTerm() {
+		return term;
+	}
+	
+	public void setTerm(int term) {
+		this.term = term;
+	}
+	
+	public int getClassTime() {
+		return classTime;
+	}
+	
+	public void setClassTime(int classTime) {
+		this.classTime = classTime;
+	}
+}

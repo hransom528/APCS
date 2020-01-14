@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class LabProgram_MaxMagnitude {
+	//Gets larger of two magnitudes
+	public static int maxMagnitude(int userVal1, int userVal2) {
+		//Gets magnitude absolutes
+		int abs1 = Math.abs(userVal1);
+		int abs2 = Math.abs(userVal2);
+		int max;
+		
+		//Compares magnitudes
+		if (abs1 > abs2) {
+			max = userVal1;
+		}
+		else if (abs2 > abs1) {
+			max = userVal2;
+		}
+		else {
+			System.out.println("Magnitudes are equal.");
+			max = 0;
+		}
+		return max;
+	}
+	
+	//MAIN
+	@SuppressWarnings("resource")
+	public static void main(String[] args) {
+		System.out.println(maxMagnitude(new Scanner(System.in).nextInt(), new Scanner(System.in).nextInt()));
+	}
+}
