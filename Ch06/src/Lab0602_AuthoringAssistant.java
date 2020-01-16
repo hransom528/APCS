@@ -6,8 +6,10 @@ public class Lab0602_AuthoringAssistant {
 
 	//Outputs menu and gets user option 
 	public static char printMenu(Scanner scanObj) {
+		boolean quitLoop = false;
+
 		//Outputs menu
-		System.out.println("\nMENU");
+		System.out.println("MENU");
 		System.out.println("c - Number of non-whitespace characters");
 		System.out.println("w - Number of words");
 		System.out.println("f - Find text");
@@ -18,21 +20,27 @@ public class Lab0602_AuthoringAssistant {
 
 		//Gets menu selection
 		userChar = scanObj.next().charAt(0);
-		while ((userChar != 'c') && (userChar != 'w') && (userChar != 'f') && (userChar != 'r') && (userChar != 's') && (userChar != 'q')) {
-			System.out.println("Choose an option:");
-			userChar = scanObj.next().charAt(0);
+		if((userChar != 'c') && (userChar != 'w') && (userChar != 'f') && (userChar != 'r') && (userChar != 's') && (userChar != 'q')) {
+			while (!quitLoop) {
+				System.out.println("Choose an option:");
+				userChar = scanObj.next().charAt(0);
+				if((userChar == 'c') || (userChar == 'w') || (userChar == 'f') || (userChar == 'r') || (userChar == 's') || (userChar == 'q')) {
+					quitLoop = false;
+				}
+			}
 		}
+		
 		return userChar;
 	}
 
 	//Quits the program 
 	public static void quit(Scanner scanObj) {
 		System.out.print("\n");
-		System.exit(0);
 		scanObj.close();
+		System.exit(0);
 	}
 
-	//Gets ammount of non-whitespace characters 
+	//Gets amount of non-whitespace characters 
 	public static int getNumOfNonWSCharacters(String usrString) {
 		int numNonWS = 0;
 		//Loops through and counts any non whitespace chars
@@ -47,42 +55,37 @@ public class Lab0602_AuthoringAssistant {
 	//Gets number of words in string
 	public static int getNumOfWords(String usrString) {
 		int numWords = 0;
-		boolean skip = false;
-		String[] endWordChars = {",", ".", " ", ";", "?", "!", "  ", "   ", "\n"};
-		/*String[] wordStrings = usrString.split(" ");
+		char[] chars = usrString.toCharArray();
 		
-		for (int i = 0; i < wordStrings.length; i++) {
-			if ((wordStrings[i].isBlank()) || (wordStrings[i].isEmpty())) {
-				
+		for (int i = 0; i < chars.length; i++) {
+			if ((chars[i] == ' ') && !(chars[i+1] == ' ')) {
+				numWords += 1;
 			}
 		}
-		*/
-		for (int i = 0; i < usrString.length(); i++) {
-			skip = false;
-			for (int c = 0; c < endWordChars.length; c++) {
-				if ((Character.toString(usrString.charAt(i)).equalsIgnoreCase(endWordChars[c]) && (!skip))) {
-					numWords++;
-					skip = true;
-				}
-			}
-		}
-		return numWords; //TODO: Fix word counter
+		
+		return numWords + 1; 
 	}
 
 	//Finds a string in a piece of text
 	public static int findText(String searchString, String sampleText) {
 		int occurences = 0;
 		int currIndex = 0; 
+		int searchIndex = 0;
+		boolean quitLoop = false;
 
 		if (sampleText.indexOf(searchString) == -1) {
 			occurences = 0;
 		}
 		else {
-			//TODO: Fix findText loop
-			if (currIndex != -1) {
-				currIndex = sampleText.indexOf(searchString);	
-				occurences++;
-				currIndex += searchString.length();
+			while (!quitLoop) {
+				currIndex = sampleText.indexOf(searchString, searchIndex);	
+				if (currIndex != -1) {
+					occurences++;
+				}
+				else {
+					quitLoop = true;
+				}
+				searchIndex = currIndex + searchString.length();
 			}
 		}
 		return occurences;
@@ -129,11 +132,11 @@ public class Lab0602_AuthoringAssistant {
 				System.out.println("\nNumber of words: " + getNumOfWords(inputString));
 			}
 			else if (userChar == 'f') {
-				System.out.println("Enter a word or phrase to be found:");
+				System.out.println("\nEnter a word or phrase to be found:");
 				scnr.nextLine();
 				searchString = scnr.nextLine();
 				occurences = findText(searchString, inputString);
-				System.out.println("" + searchString + " instances: " + occurences);
+				System.out.println("\"" + searchString + "\" instances: " + occurences);
 			}
 			else if (userChar == 'r') {
 				System.out.println("Edited text: " + replaceExclamation(inputString));
@@ -148,9 +151,11 @@ public class Lab0602_AuthoringAssistant {
 			else {
 				System.out.println("Error!");
 			}
-
+			
 			searchString = "";
 			occurences = 0;
 		}
+		
+		System.exit(0);
 	}
 }

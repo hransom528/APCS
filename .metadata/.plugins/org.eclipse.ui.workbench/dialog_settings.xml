@@ -10,10 +10,11 @@
 			<item value="org.eclipse.ui.preferences"/>
 		</list>
 		<list key="textEntries">
-			<item value="1"/>
+			<item value="2"/>
 		</list>
 		<list key="textArray">
 			<item value="dark"/>
+			<item value="light"/>
 		</list>
 	</section>
 	<section name="WorkbenchPreferenceDialogSettings">
