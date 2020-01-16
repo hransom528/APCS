@@ -77,6 +77,9 @@ public class Lab0703_ShoppingCartManager {
 		quantity = scanObj.nextInt();
 		
 		//Assigns itemObj 
+		for (int i = 0; i < cartObj.getNumItemsInCart(); i++) {
+			
+		}
 		itemObj = cartObj.getItemFromName(name);
 		itemObj.setQuantity(quantity);
 		cartObj.modifyItem(itemObj);
@@ -88,7 +91,6 @@ public class Lab0703_ShoppingCartManager {
 	public static void main(String[] args) {
 		//Declares variables
 		Scanner scnr = new Scanner(System.in);
-
 		char userChoice; 
 
 		//Gets input for ShoppingCart class

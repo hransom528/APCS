@@ -25,7 +25,7 @@ public class Lab0602_AuthoringAssistant {
 				System.out.println("Choose an option:");
 				userChar = scanObj.next().charAt(0);
 				if((userChar == 'c') || (userChar == 'w') || (userChar == 'f') || (userChar == 'r') || (userChar == 's') || (userChar == 'q')) {
-					quitLoop = false;
+					quitLoop = true;
 				}
 			}
 		}

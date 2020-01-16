@@ -32,29 +32,27 @@ public class ShoppingCart {
 		cartItems.add(item);
 	}
 
-	//Returns a specific item from the cart based off of a name
-	public ItemToPurchase getItemFromName(String searchString) {
-		ItemToPurchase tempItem = null;
-		for (int i = 0; i < cartItems.size(); i++) {
-			if (cartItems.get(i).getName().equalsIgnoreCase(searchString)) {
-				tempItem = cartItems.get(i);
-			}
-		}
-		return tempItem;
-	}
-
 	//Removes item from cart list, outputs error if no item is found to remove
 	public void removeItem(String itemName) {
 		boolean found = false;
 
+		//Determines if an item by that name exists
 		for (int i = 0; i < cartItems.size(); i++) {
 			if (cartItems.get(i).getName().equalsIgnoreCase(itemName)) {
-				cartItems.remove(i);
+				found = true;
 			}
 		}
 
+		//If found, remove the item
 		if (!found) {
 			System.out.println("Item not found in cart. Nothing removed.");
+		}
+		else {
+			for (int i = 0; i < cartItems.size(); i++) {
+				if (cartItems.get(i).getName().equalsIgnoreCase(itemName)) {
+					cartItems.remove(i);
+				}
+			}
 		}
 	}
 
@@ -66,11 +64,6 @@ public class ShoppingCart {
 		for (int j = 0; j < cartItems.size(); j++) {
 			if (cartItems.get(j).getName().equalsIgnoreCase(item.getName())) {
 				found = true;
-				//Detects if item doesn't have default values
-				if (!((cartItems.get(j).getDescription().equalsIgnoreCase("none")) && (cartItems.get(j).getName().equalsIgnoreCase("none")) && (cartItems.get(j).getPrice() == 0) && (cartItems.get(j).getQuantity() == 0))) {
-					cartItems.remove(j);
-					cartItems.add(j, item);
-				}
 			}
 		}
 
@@ -78,7 +71,15 @@ public class ShoppingCart {
 		if (!found) {
 			System.out.println("Item not found in cart. Nothing modified.");
 		}
-
+		else {
+			for (int j = 0; j < cartItems.size(); j++) {
+				//Detects if item doesn't have default values
+				if (!((cartItems.get(j).getDescription().equalsIgnoreCase("none")) && (cartItems.get(j).getName().equalsIgnoreCase("none")) && (cartItems.get(j).getPrice() == 0) && (cartItems.get(j).getQuantity() == 0))) {
+					cartItems.remove(j);
+					cartItems.add(j, item);
+				}
+			}
+		}	
 	}
 
 	//Gets the ammount of items in the cart
@@ -90,7 +91,7 @@ public class ShoppingCart {
 	public double getCostOfCart() {
 		double subTotal = 0;
 		for (int i = 0; i < cartItems.size(); i++) {
-			subTotal += (cartItems.get(i).getPrice()) * (cartItems.get(i).getQuantity());
+			subTotal += ((cartItems.get(i).getPrice()) * (cartItems.get(i).getQuantity()));
 		}
 		return subTotal;
 	}
@@ -98,7 +99,7 @@ public class ShoppingCart {
 	//Prints the total of the cart
 	public void printTotal() {
 		System.out.println(this.getCustomerName() + "'s Shopping Cart - " + this.getDate() + "\n");
-		System.out.println("Number of items: " + cartItems.size() + "\n");
+		System.out.println("Number of items: " + this.getNumItemsInCart() + "\n");
 
 		if (cartItems.isEmpty()) {
 			System.out.println("SHOPPING CART IS EMPTY");
@@ -117,7 +118,19 @@ public class ShoppingCart {
 		System.out.println(this.getCustomerName() + "'s Shopping Cart - " + this.getDate() + "\n");
 		System.out.println("Item descriptions");
 		for (int i = 0; i < cartItems.size(); i++) {
-			System.out.println("" + cartItems.get(i).getName() + ": " + cartItems.get(i).getDescription());
+			cartItems.get(i).printItemDescription();
 		}
 	}
+	
+	/*
+	//Returns a specific item from the cart based off of a name
+	public ItemToPurchase getItemFromName(String searchString) {
+		ItemToPurchase tempItem = null;
+		for (int i = 0; i < cartItems.size(); i++) {
+			if (cartItems.get(i).getName().equalsIgnoreCase(searchString)) {
+				tempItem = cartItems.get(i);
+			}
+		}
+		return tempItem;
+		*/
 }
