@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.nio.channels.NonWritableChannelException"/>
-    <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.IfInstruction"/>
-    <fullyQualifiedTypeName name="sun.nio.cs.ext.ISCII91"/>
-    <fullyQualifiedTypeName name="sun.jvm.hotspot.utilities.RBColor"/>
-    <fullyQualifiedTypeName name="src.Lab0402_PopulationGrowth"/>
     <fullyQualifiedTypeName name="java.util.concurrent.CountDownLatch"/>
     <fullyQualifiedTypeName name="jdk.jfr.internal.StringPool"/>
     <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
@@ -54,10 +49,15 @@
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="LabProgram_WordFrequencies"/>
     <fullyQualifiedTypeName name="sun.awt.geom.AreaOp.IntOp"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="Plant"/>
     <fullyQualifiedTypeName name="Flower"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="FantasyFootballPlayer"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="QuarterBack"/>
+    <fullyQualifiedTypeName name="RunningBack"/>
+    <fullyQualifiedTypeName name="WideReceiver"/>
+    <fullyQualifiedTypeName name="TightEnd"/>
 </qualifiedTypeNameHistroy>
