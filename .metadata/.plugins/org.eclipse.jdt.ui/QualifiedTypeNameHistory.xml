@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.concurrent.CountDownLatch"/>
-    <fullyQualifiedTypeName name="jdk.jfr.internal.StringPool"/>
-    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
     <fullyQualifiedTypeName name="sun.reflect.generics.tree.IntSignature"/>
     <fullyQualifiedTypeName name="src.LabProgram_ReverseString"/>
     <fullyQualifiedTypeName name="java.util.function.IntPredicate"/>
@@ -53,11 +50,14 @@
     <fullyQualifiedTypeName name="Flower"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="FantasyFootballPlayer"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="QuarterBack"/>
     <fullyQualifiedTypeName name="RunningBack"/>
     <fullyQualifiedTypeName name="WideReceiver"/>
     <fullyQualifiedTypeName name="TightEnd"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="BankAccount"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
 </qualifiedTypeNameHistroy>
