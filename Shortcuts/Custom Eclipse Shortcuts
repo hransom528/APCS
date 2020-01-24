@@ -1,6 +1,0 @@
-Custom Eclipse Java shortcuts:
--scandec: Declares a new scanner class
--nextint: Does scnr.nextInt();
--scnrin: Imports scanner class
--newMain: Creates main method
--dfdec: Creates new decimal format class with #.## formatting. 

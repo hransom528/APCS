@@ -138,9 +138,7 @@ public class Lab0703_ShoppingCartManager {
 			default:
 				System.out.println("\nChoose an option: ");
 			
-			
 			}
 		}
 	}
-
 }
