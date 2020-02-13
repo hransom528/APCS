@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="sun.reflect.generics.tree.IntSignature"/>
-    <fullyQualifiedTypeName name="src.LabProgram_ReverseString"/>
-    <fullyQualifiedTypeName name="java.util.function.IntPredicate"/>
-    <fullyQualifiedTypeName name="com.sun.tools.classfile.StackMapTable_attribute.same_frame"/>
-    <fullyQualifiedTypeName name="java.awt.desktop.QuitEvent"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="org.graalvm.compiler.core.common.Fields"/>
-    <fullyQualifiedTypeName name="jdk.jfr.internal.PrivateAccess"/>
-    <fullyQualifiedTypeName name="jdk.vm.ci.code.site.Infopoint"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="com.sun.tools.javac.jvm.StringConcat"/>
-    <fullyQualifiedTypeName name="com.sun.tools.javac.main.Option.PkgInfo"/>
-    <fullyQualifiedTypeName name="sun.tools.tree.ArrayAccessExpression"/>
     <fullyQualifiedTypeName name="javax.management.openmbean.ArrayType"/>
     <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
     <fullyQualifiedTypeName name="java.util.PrimitiveIterator.OfDouble"/>
@@ -20,19 +7,13 @@
     <fullyQualifiedTypeName name="com.sun.beans.introspect.PropertyInfo.Name"/>
     <fullyQualifiedTypeName name="sun.print.PlatformPrinterJobProxy"/>
     <fullyQualifiedTypeName name="sun.tools.tree.ThisExpression"/>
-    <fullyQualifiedTypeName name="sun.jvm.hotspot.runtime.StaticBaseConstructor"/>
-    <fullyQualifiedTypeName name="ShoppingCart"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.xerces.internal.impl.dv.xs.DoubleDV"/>
-    <fullyQualifiedTypeName name="ItemToPurchase"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
-    <fullyQualifiedTypeName name="sun.awt.www.content.audio.x_aiff"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="sortIntArray"/>
-    <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.NEW"/>
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
     <fullyQualifiedTypeName name="java.util.StringJoiner"/>
     <fullyQualifiedTypeName name="Car"/>
-    <fullyQualifiedTypeName name="sun.jvm.hotspot.oops.java_lang_Class"/>
     <fullyQualifiedTypeName name="java.io.Closeable"/>
     <fullyQualifiedTypeName name="sun.tools.tree.BitAndExpression"/>
     <fullyQualifiedTypeName name="Artwork"/>
@@ -49,7 +30,6 @@
     <fullyQualifiedTypeName name="Plant"/>
     <fullyQualifiedTypeName name="Flower"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="FantasyFootballPlayer"/>
     <fullyQualifiedTypeName name="QuarterBack"/>
     <fullyQualifiedTypeName name="RunningBack"/>
@@ -58,6 +38,26 @@
     <fullyQualifiedTypeName name="java.lang.Comparable"/>
     <fullyQualifiedTypeName name="BankAccount"/>
     <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="ShoppingCart"/>
+    <fullyQualifiedTypeName name="ItemToPurchase"/>
+    <fullyQualifiedTypeName name="java.awt.List"/>
+    <fullyQualifiedTypeName name="sun.awt.www.content.audio.x_aiff"/>
+    <fullyQualifiedTypeName name="sun.jvm.hotspot.oops.java_lang_Class"/>
+    <fullyQualifiedTypeName name="sun.net.www.content.text.plain"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.Type"/>
+    <fullyQualifiedTypeName name="jdk.jfr.internal.Type"/>
+    <fullyQualifiedTypeName name="Grid"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.NEW"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.Cloneable"/>
+    <fullyQualifiedTypeName name="java.lang.Class"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Constructor"/>
+    <fullyQualifiedTypeName name="sun.jvm.hotspot.runtime.StaticBaseConstructor"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.Iterable"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
 </qualifiedTypeNameHistroy>

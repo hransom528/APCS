@@ -122,6 +122,11 @@ public class ShoppingCart {
 		}
 	}
 	
+	//Gets an ItemToPurchase from a cart index
+	public ItemToPurchase getItemIncart(int index) {
+		return cartItems.get(index);
+	}
+	
 	/*
 	//Returns a specific item from the cart based off of a name
 	public ItemToPurchase getItemFromName(String searchString) {

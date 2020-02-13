@@ -78,9 +78,10 @@ public class Lab0703_ShoppingCartManager {
 		
 		//Assigns itemObj 
 		for (int i = 0; i < cartObj.getNumItemsInCart(); i++) {
-			
+			if (cartObj.getItemIncart(i).getName() == name) {
+				itemObj = cartObj.getItemIncart(i);
+			}
 		}
-		itemObj = cartObj.getItemFromName(name);
 		itemObj.setQuantity(quantity);
 		cartObj.modifyItem(itemObj);
 				
@@ -108,7 +109,7 @@ public class Lab0703_ShoppingCartManager {
 		userChoice = printMenu(cart, scnr);
 		
 		//Loops until program is quit
-		while (userChoice != 'q') {
+		while (userChoice != 'q') { //TODO: Fix menu input
 			//Gets new option
 			System.out.println("Choose an option: ");
 			userChoice = scnr.next().charAt(0);

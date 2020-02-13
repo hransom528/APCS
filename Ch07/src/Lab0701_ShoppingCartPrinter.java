@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Lab0701_ShoppingCartPrinter {
-
 	public static void main(String[] args) {
 		//Initializes scanner object and variables
 		Scanner scnr = new Scanner(System.in);
@@ -44,5 +43,4 @@ public class Lab0701_ShoppingCartPrinter {
 		System.out.print("" + item2.getName() + " " + item2.getQuantity() + " @ $" + item2.getPrice() + " = $" + item2Total + "\n");
 		System.out.println("Total: $" + totalTotal);
 	}
-
 }
