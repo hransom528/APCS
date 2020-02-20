@@ -6,8 +6,11 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="pow"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="TODO Auto-generated method stub"/>
+			<item value="subList"/>
+			<item value="subLust"/>
 			<item value="pow"/>
 			<item value="int"/>
 			<item value="yourMom"/>
@@ -20,6 +23,7 @@
 			<item value="double"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
 			<item value="String"/>
 			<item value="leapYear"/>
 			<item value="userList"/>
