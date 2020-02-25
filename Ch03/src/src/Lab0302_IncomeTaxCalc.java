@@ -1,6 +1,6 @@
 package src;
-import java.util.Scanner;
 import java.text.DecimalFormat;
+import java.util.Scanner;
 
 public class Lab0302_IncomeTaxCalc {
 

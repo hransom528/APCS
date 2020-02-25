@@ -1,5 +1,5 @@
-import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class PlantArrayListExample {
 	//Prints out each object's info from a Plant ArrayList

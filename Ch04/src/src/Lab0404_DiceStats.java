@@ -1,6 +1,6 @@
 package src;
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 public class Lab0404_DiceStats {
 
 	public static void main(String[] args) {
