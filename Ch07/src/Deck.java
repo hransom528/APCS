@@ -84,7 +84,7 @@ public class Deck{
 	 * shuffle : Shuffles the deck (ArrayList)
 	 */
 	public void shuffle() {
-	   Random generator = new Random(1);
+		Random generator = new Random(1);
 		if (cards.size() < MAX_SIZE)
 			return;
 		Card[] array = new Card[MAX_SIZE];

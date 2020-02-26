@@ -60,7 +60,7 @@ public class War {
 			System.out.println("Player 2 wins the game!");
 		}
 	}
-	
+
 	private static void goToWar() {
 		while ((player1.size() < warCard || player2.size() < warCard) && warCard > 1) {
 			warCard--;
