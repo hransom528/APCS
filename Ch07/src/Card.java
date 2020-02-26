@@ -26,12 +26,7 @@ public class Card {
 	 * @return true if the cards are the same, false otherwise.
 	 */
 	public boolean equals(Card otherCard) {
-		if ((this.rank == otherCard.getRank()) && (this.suit.equals(otherCard.suit))) {
-			return true;
-		}
-		else {
-			return false;
-		}
+		return (this.rank == otherCard.getRank()); 
 	}
 
 	/**

@@ -6,6 +6,7 @@ public class War {
 	static ArrayList<Card> player2 = new ArrayList<Card>();
 	static int warCard = 4;
 
+	//MAIN
 	public static void main(String[] args) {
 		deck.shuffle();
 
