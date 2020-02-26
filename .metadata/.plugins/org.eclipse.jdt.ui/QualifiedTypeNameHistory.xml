@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="sun.print.PlatformPrinterJobProxy"/>
-    <fullyQualifiedTypeName name="com.sun.org.apache.xerces.internal.impl.dv.xs.DoubleDV"/>
-    <fullyQualifiedTypeName name="java.lang.Character"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="sortIntArray"/>
-    <fullyQualifiedTypeName name="java.util.StringJoiner"/>
-    <fullyQualifiedTypeName name="Car"/>
-    <fullyQualifiedTypeName name="java.io.Closeable"/>
-    <fullyQualifiedTypeName name="sun.tools.tree.BitAndExpression"/>
     <fullyQualifiedTypeName name="Artwork"/>
     <fullyQualifiedTypeName name="Artist"/>
     <fullyQualifiedTypeName name="Pet"/>
@@ -17,7 +8,6 @@
     <fullyQualifiedTypeName name="java.lang.SuppressWarnings"/>
     <fullyQualifiedTypeName name="java.time.Year"/>
     <fullyQualifiedTypeName name="sun.security.util.Length"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="LabProgram_WordFrequencies"/>
     <fullyQualifiedTypeName name="sun.awt.geom.AreaOp.IntOp"/>
     <fullyQualifiedTypeName name="Plant"/>
@@ -44,20 +34,30 @@
     <fullyQualifiedTypeName name="java.lang.Class"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.NEW"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="Grid"/>
-    <fullyQualifiedTypeName name="sun.tools.tree.ThisExpression"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.lang.Cloneable"/>
-    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
     <fullyQualifiedTypeName name="jdk.jfr.internal.Type"/>
     <fullyQualifiedTypeName name="java.sql.Array"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="java.lang.Iterable"/>
-    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
     <fullyQualifiedTypeName name="sun.jvm.hotspot.oops.java_lang_Class"/>
+    <fullyQualifiedTypeName name="java.lang.Cloneable"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="javax.sound.sampled.TargetDataLine"/>
+    <fullyQualifiedTypeName name="java.lang.Character"/>
+    <fullyQualifiedTypeName name="org.graalvm.compiler.lir.amd64.vector.AMD64VectorShuffle.ShuffleFloatOp"/>
+    <fullyQualifiedTypeName name="Ship"/>
+    <fullyQualifiedTypeName name="Battleship"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="Table"/>
+    <fullyQualifiedTypeName name="sun.tools.serialver.resources.serialver"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="Card"/>
+    <fullyQualifiedTypeName name="sun.tools.tree.ThisExpression"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="Deck"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
