@@ -1,4 +1,4 @@
-public class Card {
+public class Card  {
 	/**Instance data:
 	 * suit : String for suit of the card
 	 * rank : int value for rank of the card 
@@ -86,6 +86,7 @@ public class Card {
 	 * 			"Jack of hearts"
 	 * 			"5 of clubs"
 	 */
+	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(this.rankToString());

@@ -13,6 +13,5 @@ INDEX VERSION 1.131+H:\APCS\.metadata\.plugins\org.eclipse.jdt.core
 113558702.index
 2102479436.index
 1961297511.index
-2472487776.index
 65025777.index
 337678210.index
