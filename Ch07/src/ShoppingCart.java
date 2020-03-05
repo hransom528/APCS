@@ -64,11 +64,13 @@ public class ShoppingCart {
 	//Modifies a specified item
 	public void modifyItem(ItemToPurchase item) { 
 		boolean found = false;
+		int index = 0;
 
-		//Finds and modifies item
+		//Finds item by name
 		for (int j = 0; j < cartItems.size(); j++) {
 			if (cartItems.get(j).getName().equalsIgnoreCase(item.getName())) {
 				found = true;
+				index = j; 
 			}
 		}
 
@@ -77,12 +79,19 @@ public class ShoppingCart {
 			System.out.println("Item not found in cart. Nothing modified.");
 		}
 		else {
-			for (int j = 0; j < cartItems.size(); j++) {
 				//Detects if item doesn't have default values
-				if (!((cartItems.get(j).getDescription().equalsIgnoreCase("none")) && (cartItems.get(j).getName().equalsIgnoreCase("none")) && (cartItems.get(j).getPrice() == 0) && (cartItems.get(j).getQuantity() == 0))) {
-					cartItems.set(j, item);
+				if (!(item.getDescription().equalsIgnoreCase("none"))) {
+					cartItems.get(index).setDescription(item.getDescription());
 				}
-			}
+				if (!(item.getName().equalsIgnoreCase("none")))  {
+					cartItems.get(index).setDescription(item.getDescription());
+				}
+				if (!(item.getPrice() == 0)) {
+					cartItems.get(index).setPrice(item.getPrice());
+				}
+				if (!(item.getQuantity() == 0)) {
+					cartItems.get(index).setQuantity(item.getQuantity());
+				}
 		}	
 	}
 
@@ -130,21 +139,4 @@ public class ShoppingCart {
 			cartItems.get(i).printItemDescription();
 		}
 	}
-	
-	//Gets an ItemToPurchase from a cart index
-	public ItemToPurchase getItemIncart(int index) {
-		return cartItems.get(index);
-	}
-	
-	/*
-	//Returns a specific item from the cart based off of a name
-	public ItemToPurchase getItemFromName(String searchString) {
-		ItemToPurchase tempItem = null;
-		for (int i = 0; i < cartItems.size(); i++) {
-			if (cartItems.get(i).getName().equalsIgnoreCase(searchString)) {
-				tempItem = cartItems.get(i);
-			}
-		}
-		return tempItem;
-		*/
 }

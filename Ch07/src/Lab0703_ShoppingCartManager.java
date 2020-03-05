@@ -72,7 +72,6 @@ public class Lab0703_ShoppingCartManager {
 		ItemToPurchase itemObj = new ItemToPurchase();
 		String name;
 		int quantity = 0;
-		boolean found = false;
 
 		//Gets input for ItemToPurchase
 		System.out.println("CHANGE ITEM QUANTITY");
@@ -81,27 +80,10 @@ public class Lab0703_ShoppingCartManager {
 		name = scanObj.nextLine();
 		System.out.println("Enter the new quantity:");
 		quantity = scanObj.nextInt();
-
-		for (int i = 0; i < cartObj.getSize(); i++) {
-			if (cartObj.getItemIncart(i).getName().equals(name)) {
-				found = true;
-			}
-		}
-
-		//Assigns itemObj 
-		if (!found) {
-			System.out.println("Item not found in cart. Nothing modified.");
-		}
-		else {
-			for (int i = 0; i < cartObj.getSize(); i++) {
-				if (cartObj.getItemIncart(i).getName().equals(name)) {
-					itemObj = cartObj.getItemIncart(i);//TODO: Finish Lab0703
-				}
-			}
-			itemObj.setQuantity(quantity);
-			cartObj.modifyItem(itemObj);
-		}
 		
+		itemObj.setName(name);
+		itemObj.setQuantity(quantity);
+		cartObj.modifyItem(itemObj);
 	}
 
 	//MAIN
