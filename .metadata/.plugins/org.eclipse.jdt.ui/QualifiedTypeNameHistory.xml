@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="sun.security.util.Length"/>
     <fullyQualifiedTypeName name="LabProgram_WordFrequencies"/>
     <fullyQualifiedTypeName name="sun.awt.geom.AreaOp.IntOp"/>
     <fullyQualifiedTypeName name="Plant"/>
@@ -12,9 +11,7 @@
     <fullyQualifiedTypeName name="WideReceiver"/>
     <fullyQualifiedTypeName name="TightEnd"/>
     <fullyQualifiedTypeName name="BankAccount"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="ShoppingCart"/>
-    <fullyQualifiedTypeName name="ItemToPurchase"/>
     <fullyQualifiedTypeName name="java.awt.List"/>
     <fullyQualifiedTypeName name="sun.awt.www.content.audio.x_aiff"/>
     <fullyQualifiedTypeName name="sun.net.www.content.text.plain"/>
@@ -29,7 +26,6 @@
     <fullyQualifiedTypeName name="java.sql.Array"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="java.lang.Iterable"/>
-    <fullyQualifiedTypeName name="sun.jvm.hotspot.oops.java_lang_Class"/>
     <fullyQualifiedTypeName name="java.lang.Cloneable"/>
     <fullyQualifiedTypeName name="javax.sound.sampled.TargetDataLine"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
@@ -60,4 +56,8 @@
     <fullyQualifiedTypeName name="Carrier"/>
     <fullyQualifiedTypeName name="Cruiser"/>
     <fullyQualifiedTypeName name="Frigate"/>
+    <fullyQualifiedTypeName name="com.sun.jndi.url.rmi.rmiURLContext"/>
+    <fullyQualifiedTypeName name="sun.jvm.hotspot.oops.java_lang_Class"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="ItemToPurchase"/>
 </qualifiedTypeNameHistroy>

@@ -27,6 +27,11 @@ public class ShoppingCart {
 		return currentDate;
 	}
 
+	//Gets size of cart in terms of unique items
+	public int getSize() {
+		return cartItems.size();
+	}
+	
 	//Adds new ItemToPurchase to cart
 	public void addItem(ItemToPurchase item) {
 		cartItems.add(item);
@@ -75,21 +80,25 @@ public class ShoppingCart {
 			for (int j = 0; j < cartItems.size(); j++) {
 				//Detects if item doesn't have default values
 				if (!((cartItems.get(j).getDescription().equalsIgnoreCase("none")) && (cartItems.get(j).getName().equalsIgnoreCase("none")) && (cartItems.get(j).getPrice() == 0) && (cartItems.get(j).getQuantity() == 0))) {
-					cartItems.remove(j);
-					cartItems.add(j, item);
+					cartItems.set(j, item);
 				}
 			}
 		}	
 	}
 
 	//Gets the ammount of items in the cart
+	@SuppressWarnings("unused")
 	public int getNumItemsInCart() {
-		return cartItems.size();
+		int size = 0;
+		for (ItemToPurchase item : cartItems) {
+			size += item.getQuantity();
+		}
+		return size;
 	}
 
 	//Gets the subtotal of the cart
-	public double getCostOfCart() {
-		double subTotal = 0;
+	public int getCostOfCart() {
+		int subTotal = 0;
 		for (int i = 0; i < cartItems.size(); i++) {
 			subTotal += ((cartItems.get(i).getPrice()) * (cartItems.get(i).getQuantity()));
 		}

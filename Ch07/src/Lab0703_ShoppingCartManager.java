@@ -16,6 +16,10 @@ public class Lab0703_ShoppingCartManager {
 		System.out.println("q - Quit");
 		System.out.println("\nChoose an option:");
 		userChar = scanObj.next().charAt(0);
+		while ((userChar != 'a') && (userChar != 'd') && (userChar != 'c') && (userChar != 'i') && (userChar != 'o') && (userChar != 'q')) {
+			System.out.println("Choose an option:");
+			userChar = scanObj.next().charAt(0);
+		}
 		return userChar;
 	}
 
@@ -30,11 +34,11 @@ public class Lab0703_ShoppingCartManager {
 		System.out.println("OUTPUT ITEMS' DESCRIPTIONS");
 		cartObj.printDescriptions();
 	}
-	
+
 	//Adds a new item to the cart
 	public static void addItemToCart(ShoppingCart cartObj, Scanner scanObj) {
 		ItemToPurchase itemObj = new ItemToPurchase();
-		
+
 		//Gets item parameters
 		System.out.println("ADD ITEM TO CART");
 		System.out.println("Enter the item name:");
@@ -46,28 +50,30 @@ public class Lab0703_ShoppingCartManager {
 		itemObj.setPrice(scanObj.nextInt());
 		System.out.println("Enter the item quantity:");
 		itemObj.setQuantity(scanObj.nextInt());
-		
+
 		cartObj.addItem(itemObj);
 	}
-	
+
 	//Removes an item from the cart
 	public static void removeItemFromCart(ShoppingCart cartObj, Scanner scanObj) {
 		String name;
-		
+
 		//Gets name of item to remove
 		System.out.println("REMOVE ITEM FROM CART");
 		System.out.println("Enter name of item to remove:");
+		scanObj.nextLine();
 		name = scanObj.nextLine();
-		
+
 		cartObj.removeItem(name);
 	}
-	
+
 	//Changes the item quantity 
 	public static void changeItemQuantity(ShoppingCart cartObj, Scanner scanObj) {
 		ItemToPurchase itemObj = new ItemToPurchase();
 		String name;
 		int quantity = 0;
-		
+		boolean found = false;
+
 		//Gets input for ItemToPurchase
 		System.out.println("CHANGE ITEM QUANTITY");
 		System.out.println("Enter the item name:");
@@ -75,24 +81,34 @@ public class Lab0703_ShoppingCartManager {
 		name = scanObj.nextLine();
 		System.out.println("Enter the new quantity:");
 		quantity = scanObj.nextInt();
-		
-		//Assigns itemObj 
-		for (int i = 0; i < cartObj.getNumItemsInCart(); i++) {
-			if (cartObj.getItemIncart(i).getName() == name) {
-				itemObj = cartObj.getItemIncart(i);
+
+		for (int i = 0; i < cartObj.getSize(); i++) {
+			if (cartObj.getItemIncart(i).getName().equals(name)) {
+				found = true;
 			}
 		}
-		itemObj.setQuantity(quantity);
-		cartObj.modifyItem(itemObj);
-				
-		 //TODO: Finish Lab0703
+
+		//Assigns itemObj 
+		if (!found) {
+			System.out.println("Item not found in cart. Nothing modified.");
+		}
+		else {
+			for (int i = 0; i < cartObj.getSize(); i++) {
+				if (cartObj.getItemIncart(i).getName().equals(name)) {
+					itemObj = cartObj.getItemIncart(i);//TODO: Finish Lab0703
+				}
+			}
+			itemObj.setQuantity(quantity);
+			cartObj.modifyItem(itemObj);
+		}
+		
 	}
-	
+
 	//MAIN
 	public static void main(String[] args) {
 		//Declares variables
 		Scanner scnr = new Scanner(System.in);
-		char userChoice; 
+		char userChoice = 'x'; 
 
 		//Gets input for ShoppingCart class
 		System.out.print("Enter Customer's Name: ");
@@ -105,15 +121,10 @@ public class Lab0703_ShoppingCartManager {
 		//Initializes new cart class
 		ShoppingCart cart = new ShoppingCart(cartName, date);
 
-		//Prints menu initially
-		userChoice = printMenu(cart, scnr);
-		
 		//Loops until program is quit
-		while (userChoice != 'q') { //TODO: Fix menu input
-			//Gets new option
-			System.out.println("Choose an option: ");
-			userChoice = scnr.next().charAt(0);
-			
+		while (userChoice != 'q') {
+			userChoice = printMenu(cart, scnr);
+
 			//Detects which option the user selected
 			switch (userChoice) {
 			case 'a': //Adds item
@@ -136,10 +147,10 @@ public class Lab0703_ShoppingCartManager {
 				cart = null;
 				System.exit(0);
 				break;
-			default:
-				System.out.println("\nChoose an option: ");
-			
 			}
 		}
+		scnr.close();
+		cart = null;
+		System.exit(0);
 	}
 }

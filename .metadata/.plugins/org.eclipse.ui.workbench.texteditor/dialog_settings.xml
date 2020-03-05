@@ -8,6 +8,8 @@
 		<item key="isRegEx" value="false"/>
 		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="double"/>
+			<item value="next"/>
 			<item value="&amp;&amp;"/>
 			<item value="TODO Auto-generated method stub"/>
 			<item value="subList"/>
@@ -21,7 +23,6 @@
 			<item value="float"/>
 			<item value="searchString"/>
 			<item value="abbreviation"/>
-			<item value="double"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>
