@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="getItemIn"/>
 		<list key="findhistory">
+			<item value="getItemIn"/>
 			<item value="double"/>
 			<item value="next"/>
 			<item value="&amp;&amp;"/>
@@ -22,7 +23,6 @@
 			<item value="scnr"/>
 			<item value="float"/>
 			<item value="searchString"/>
-			<item value="abbreviation"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

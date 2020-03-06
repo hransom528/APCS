@@ -96,7 +96,6 @@ public class ShoppingCart {
 	}
 
 	//Gets the ammount of items in the cart
-	@SuppressWarnings("unused")
 	public int getNumItemsInCart() {
 		int size = 0;
 		for (ItemToPurchase item : cartItems) {
