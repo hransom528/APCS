@@ -5,6 +5,7 @@ public class RunningBack extends FantasyFootballPlayer {
 	}
 
 	//Gets score for a runningback
+	@Override
 	public double getScore() {
 		double score = 0;
 		score += 6 * this.getNumTouchdowns();

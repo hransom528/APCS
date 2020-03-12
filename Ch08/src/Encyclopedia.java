@@ -18,6 +18,7 @@ public class Encyclopedia extends Book {
 		this.numVolumes = numVolumes;
 	}
 
+	@Override
 	public void printInfo() {
 		System.out.println("Book Information: ");
 		System.out.println("   Book Title: " + title);

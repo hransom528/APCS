@@ -38,6 +38,7 @@ public abstract class FantasyFootballPlayer {
 	public abstract double getScore();
 	
 	//Outputs information
+	@Override
 	public String toString() {
 		return ("" + getNumYards() + " - " + getNumTouchdowns() + " - " + getScore());
 	}

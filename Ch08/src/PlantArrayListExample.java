@@ -16,7 +16,7 @@ public class PlantArrayListExample {
 		String input;
 		ArrayList<Plant> myGarden = new ArrayList<Plant>();
 		String plantName = "";
-		double plantCost = 0;
+		int plantCost = 0;
 		String colorOfFlowers = "";
 		boolean isAnnual; 
 		Plant tempPlant = new Plant();
@@ -25,12 +25,12 @@ public class PlantArrayListExample {
 		//Gets input
 		input = scnr.next();
 		while(!input.equals("-1")){
-			if (input.equalsIgnoreCase("plant")) { //TODO: Fix input
+			if (input.equalsIgnoreCase("plant")) {
 				plantName = scnr.next();
 				plantCost = scnr.nextInt();
 				
 				tempPlant.setPlantName(plantName);
-				tempPlant.setPlantCost(Double.toString(plantCost));
+				tempPlant.setPlantCost(Integer.toString(plantCost));
 				myGarden.add(tempPlant);
 			}
 			else if (input.equalsIgnoreCase("flower")) {
@@ -40,7 +40,7 @@ public class PlantArrayListExample {
 				colorOfFlowers = scnr.next();
 				
 				tempFlower.setPlantName(plantName);
-				tempFlower.setPlantCost(Double.toString(plantCost));
+				tempFlower.setPlantCost(Integer.toString(plantCost));
 				tempFlower.setPlantType(isAnnual);
 				tempFlower.setColorOfFlowers(colorOfFlowers);
 				myGarden.add(tempFlower);
@@ -51,10 +51,12 @@ public class PlantArrayListExample {
 			plantName = "";
 			plantCost = 0;
 			colorOfFlowers = "";
+			isAnnual = false;
+			tempPlant = new Plant();
+			tempFlower = new Flower();
 			input = scnr.next();
 		}
 		scnr.close();
-		
 		printArrayList(myGarden);
 	}
 }

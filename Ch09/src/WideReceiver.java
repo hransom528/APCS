@@ -5,6 +5,7 @@ public class WideReceiver extends FantasyFootballPlayer {
 	}
 
 	//Gets score for a wide receiver
+	@Override
 	public double getScore() {
 		double score = 0;
 		score += 6 * this.getNumTouchdowns();

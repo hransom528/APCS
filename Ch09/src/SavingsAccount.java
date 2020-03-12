@@ -36,6 +36,7 @@ public class SavingsAccount extends BankAccount {
 	 * Displays the name and balance of the account
 	 * @return name and balance
 	 */
+	@Override
 	public String toString() {
 		return super.toString() + "\tInterest rate: " + interestRate;
 	}

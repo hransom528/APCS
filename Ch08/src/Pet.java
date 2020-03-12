@@ -27,6 +27,7 @@ public class Pet
 	/**
 	 * Returns a string representation of this pet.
 	 */
+	@Override
 	public String toString()
 	{
 		return "pet " + name;

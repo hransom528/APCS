@@ -12,6 +12,7 @@ public class Snake extends Pet {
 		return length;
 	}
 	
+	@Override
 	public String toString() {
 		return "pet " + getName() + " is a snake, " + getLength() + " inches long";
 	}

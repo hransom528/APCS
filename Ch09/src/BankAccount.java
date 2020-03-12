@@ -79,6 +79,7 @@ public class BankAccount implements Comparable<BankAccount> {
 	 * Displays the name and balance of the account
 	 * @return name and balance
 	 */
+	@Override
 	public String toString() {
 		return name + ": $" + balance;
 	}

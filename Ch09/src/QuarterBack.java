@@ -5,6 +5,7 @@ public class QuarterBack extends FantasyFootballPlayer {
 	}
 	
 	//Gets score for a quarterback
+	@Override
 	public double getScore() {
 		double score = 0;
 		score += 4 * this.getNumTouchdowns();

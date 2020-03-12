@@ -5,6 +5,7 @@ public class TightEnd extends FantasyFootballPlayer {
 	}
 	
 	//Gets score for a tight end
+	@Override
 	public double getScore() {
 		double score = 0;
 		score += 6 * this.getNumTouchdowns();

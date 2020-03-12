@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="LabProgram_WordFrequencies"/>
     <fullyQualifiedTypeName name="sun.awt.geom.AreaOp.IntOp"/>
     <fullyQualifiedTypeName name="Plant"/>
     <fullyQualifiedTypeName name="Flower"/>
@@ -48,7 +47,6 @@
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="java.lang.IllegalStateException"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="Ship"/>
     <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
@@ -58,6 +56,8 @@
     <fullyQualifiedTypeName name="Frigate"/>
     <fullyQualifiedTypeName name="com.sun.jndi.url.rmi.rmiURLContext"/>
     <fullyQualifiedTypeName name="sun.jvm.hotspot.oops.java_lang_Class"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="ItemToPurchase"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.axes.OneStepIterator"/>
 </qualifiedTypeNameHistroy>

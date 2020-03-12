@@ -18,6 +18,7 @@ public class CheckingAccount extends BankAccount{
 	 * Increments the number of transactions.
 	 * @param amount amount deposited
 	 */
+	@Override
 	public void deposit(double amount) {
 		super.deposit(amount);
 		numTrans++;
@@ -28,6 +29,7 @@ public class CheckingAccount extends BankAccount{
 	 * Increments the number of transactions.
 	 * @param amount amount withdrawn
 	 */
+	@Override
 	public void withdraw(double amount) {
 		super.withdraw(amount);
 		numTrans++;
@@ -49,6 +51,7 @@ public class CheckingAccount extends BankAccount{
 		return numTrans;
 	}
 	
+	@Override
 	public String toString() {
 		return super.toString() + "\tNumber of Transacitons: " + numTrans;
 	}
