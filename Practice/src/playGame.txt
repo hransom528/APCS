@@ -1,0 +1,45 @@
+/** Plays a simulated game between two players, as described in part (b). */
+public void playGame() {
+    int player1Coins = startingCoins;
+    int player2Coins = startingCoins;
+    int player1Move;
+    int player2Move;
+    boolean gameEnd = false;
+    
+    //Plays maxRounds of game
+    for (int i=0; i < maxRounds; i++) {
+        if (!gameEnd) { 
+            //Gets player moves
+            player1Move = getPlayer1Move();
+            player2Move = getPlayer2Move(i);
+        
+            //Calculates move results
+            player1Coins -= player1Move;
+            player2Coins -= player2Move;
+            if (player1Move == player2Move) || (Math.abs(player1Move - player2Move) == 1) {
+                //Off-by-one and tie have the same outcome
+                player2Coins++;
+            }
+            else if (Math.abs(player1Move - player2Move) == 2)  {
+                //Off-by-two
+                player1Coins += 2;
+            }
+            
+            //Determines if game has ended before maxRounds
+            if (player1Coins < 3) || (player2Coins < 3) {
+                gameEnd = true;
+            }
+        }
+    }
+    
+    //Ends game
+    if (player1Coins == player2Coins) {
+        System.out.println("tie game");
+    }
+    else if (player1Coins > player2Coins) {
+        System.out.println("player 1 wins");
+    }
+    else {
+        System.out.println("player 2 wins");
+    }
+}
