@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.PrimitiveIterator.OfDouble;
 
 public class DateParser {
 	public static int getMonthAsInt(String monthString) {
@@ -53,11 +54,29 @@ public class DateParser {
 	public static void main(String[] args) {
 		Scanner scnr = new Scanner(System.in);
 		ArrayList<String> dates = new ArrayList<String>();
+		String tempString = "";
 		int tempMonthInt;
 		int tempDayInt;
 		int tempYearInt;
-
+		
 		// TODO: Read dates from input, parse the dates to find the one
 		//       in the correct format, and output in mm/dd/yyyy format
+		
+		//Gets input
+		while (!tempString.contains("-1")) {
+			tempString = scnr.nextLine();
+			dates.add(tempString);
+		}
+		scnr.close();
+		
+		//Parses strings
+		for (String item: dates) {
+			
+		}
+		
+		//Outputs correctly formatted strings
+		for (String item : dates) {
+			System.out.println(item);
+		}
 	}
 }
