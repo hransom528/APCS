@@ -4,11 +4,11 @@ public class Lab0602_AuthoringAssistant {
 	static boolean quit = false;
 	static char userChar;
 
-	//Outputs menu and gets user option 
+	// Outputs menu and gets user option 
 	public static char printMenu(Scanner scanObj) {
 		boolean quitLoop = false;
 
-		//Outputs menu
+		// Outputs menu
 		System.out.println("MENU");
 		System.out.println("c - Number of non-whitespace characters");
 		System.out.println("w - Number of words");
@@ -18,7 +18,7 @@ public class Lab0602_AuthoringAssistant {
 		System.out.println("q - Quit");
 		System.out.println("\nChoose an option:");
 
-		//Gets menu selection
+		// Gets menu selection
 		userChar = scanObj.next().charAt(0);
 		if((userChar != 'c') && (userChar != 'w') && (userChar != 'f') && (userChar != 'r') && (userChar != 's') && (userChar != 'q')) {
 			while (!quitLoop) {
@@ -33,17 +33,17 @@ public class Lab0602_AuthoringAssistant {
 		return userChar;
 	}
 
-	//Quits the program 
+	// Quits the program 
 	public static void quit(Scanner scanObj) {
 		System.out.print("\n");
 		scanObj.close();
 		System.exit(0);
 	}
 
-	//Gets amount of non-whitespace characters 
+	// Gets amount of non-whitespace characters 
 	public static int getNumOfNonWSCharacters(String usrString) {
 		int numNonWS = 0;
-		//Loops through and counts any non whitespace chars
+		// Loops through and counts any non whitespace chars
 		for (int i = 0; i < usrString.length(); i++) {
 			if (usrString.charAt(i) != ' ') {
 				numNonWS += 1;
@@ -52,7 +52,7 @@ public class Lab0602_AuthoringAssistant {
 		return numNonWS;
 	}
 
-	//Gets number of words in string
+	// Gets number of words in string
 	public static int getNumOfWords(String usrString) {
 		int numWords = 0;
 		char[] chars = usrString.toCharArray();
@@ -63,65 +63,54 @@ public class Lab0602_AuthoringAssistant {
 			}
 		}
 		
-		return numWords + 1; 
+		return numWords++; 
 	}
 
-	//Finds a string in a piece of text
+	// Finds a string in a piece of text
 	public static int findText(String searchString, String sampleText) {
-		int occurences = 0;
-		int currIndex = 0; 
-		int searchIndex = 0;
-		boolean quitLoop = false;
+		int count = 0;
+		int index = 0; 
 
 		if (sampleText.indexOf(searchString) == -1) {
-			occurences = 0;
+			return 0;
 		}
 		else {
-			while (!quitLoop) {
-				currIndex = sampleText.indexOf(searchString, searchIndex);	
-				if (currIndex != -1) {
-					occurences++;
+			for (int searchIndex = 0; searchIndex < sampleText.length() - 1; searchIndex += searchString.length()) {
+				index = sampleText.indexOf(searchString, searchIndex);	
+				if (index != -1) {
+					count++;
 				}
-				else {
-					quitLoop = true;
-				}
-				searchIndex = currIndex + searchString.length();
+				searchIndex = index;
 			}
 		}
-		return occurences;
+		return count;
 	}
 
-	//Replaces all !'s in a string 
+	// Replaces all !'s in a string 
 	public static String replaceExclamation(String usrString) {
-		String newString = usrString.replaceAll("!", ".");
-		System.out.println("Edited text: " + newString);
-		return newString;
+		return usrString.replaceAll("!", ".");
 	}
 
-	//Shortens "  " to " " in a string
+	// Shortens "  " to " " in a string
 	public static String shortenSpace(String usrString) {
-		String newString = usrString;
-		while (newString.indexOf("  ") != -1) {
-			newString = newString.replace("  ", " ");
-		}
-		return newString;
+		return usrString.replaceAll("  ", " ");
 	}
 
-	//MAIN
+	// MAIN
 	public static void main(String[] args) {
-		//Declares variables 
+		// Declares variables 
 		Scanner scnr = new Scanner(System.in);
 		String inputString = "";
 		String searchString = "";
 		int occurences;
 
-		//Gets input 
+		// Gets input 
 		System.out.println("Enter a sample text:");
 		inputString = scnr.nextLine();
 		System.out.print("\nYou entered: ");
 		System.out.println(inputString);
 
-		//Calls methods that user selects
+		// Calls methods that user selects
 		while (!quit) {
 			userChar = printMenu(scnr);
 
